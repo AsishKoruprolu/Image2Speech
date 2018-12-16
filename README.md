@@ -1,15 +1,13 @@
-# Neuraltalk2-pytorch
+# Image2Speech
 
-Changes compared to neuraltalk2.
 - Instead of using random split, we use [karpathy's train-val-test split](http://cs.stanford.edu/people/karpathy/deepimagesent/caption_datasets.zip).
-- Use resnet instead of vgg;
-- Much more models (you can check out models folder).
+- other models are available as well.
 
 ## Requirements
 Python 2.7 (because there is no [coco-caption](https://github.com/tylin/coco-caption) version for python 3)
 PyTorch 0.2 (along with torchvision)
 
-You need to download pretrained resnet model for both training and evaluation. The models can be downloaded from [here](https://drive.google.com/open?id=0B7fNdx_jAqhtbVYzOURMdDNHSGM), and should be placed in `data/imagenet_weights`.
+You need to download pretrained resnet model for both training and evaluation. The models can be downloaded from [here](https://drive.google.com/open?id=0B7fNdx_jAqhtbVYzOURMdDNHSGM), and should be placed in `data/imagenet_weights`. We use this data from Karpath's repository.
 
 ## Pretrained models
 Pretrained models are provided [here](https://drive.google.com/open?id=0B7fNdx_jAqhtN0lUbU5kN1pMZUE). And the performances of each model will be maintained in this [issue](https://github.com/ruotianluo/neuraltalk2.pytorch/issues/10).
@@ -93,8 +91,13 @@ The defualt split to evaluate is test. The default inference method is greedy de
 
 **Train on other dataset**. It should be trivial to port if you can create a file like `dataset_coco.json` for your own dataset.
 
+** setting up eSpeak**
+After setting up eSpeak, download the files given in this drive link:
+## TO-DO
+
 **Live demo**. Not supported now. Welcome pull request.
 
 ## Acknowledgements
 
 Thanks the original [neuraltalk2](https://github.com/karpathy/neuraltalk2) and awesome PyTorch team.
+Ruotian Luo, https://github.com/ruotianluo/ImageCaptioning.pytorch/tree/with_finetune .
