@@ -2,6 +2,7 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
+from subprocess import call
 import json
 import numpy as np
 
@@ -127,3 +128,4 @@ if lang_stats:
 if opt.dump_json == 1:
     # dump the json
     json.dump(split_predictions, open('vis/vis.json', 'w'))
+rc = call("./speak.sh", shell=True) # this will invoke the speech synthesizer
