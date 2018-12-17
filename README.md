@@ -91,11 +91,21 @@ The defualt split to evaluate is test. The default inference method is greedy de
 
 **Train on other dataset**. It should be trivial to port if you can create a file like `dataset_coco.json` for your own dataset.
 
+## Speech Synthesis
 ** setting up eSpeak**
-After setting up eSpeak, download the files given in this drive link:
-## TO-DO
+Install eSpeak using this command
+```bash
+$ sudo apt-get install espeak
+```
+** Collecting the relevant files **
+Copy the speak.sh file from this google drive link into the repositories directory:
+https://drive.google.com/open?id=1bayh64F9scgB_bjkPaTQCIxi0PC3fD1s
 
-**Live demo**. Not supported now. Welcome pull request.
+** Now run the following command to test **
+```bash
+python eval.py --model_path path_to_model.pth --cnn_model_path path_to_model-cnn.pth --infos_path path_to_infos_st.pkl --image_folder path_to_test_images --num_images -1
+```
+
 
 ## Acknowledgements
 
